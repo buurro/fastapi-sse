@@ -19,4 +19,4 @@ poetry install
 poetry run uvicorn main:app --reload
 ```
 
-You can then access this excample at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+You can then access this example at [http://127.0.0.1:8000](http://127.0.0.1:8000)
