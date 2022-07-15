@@ -1,5 +1,7 @@
 # Server-sent events using FastAPI
 
+![Progress Steps Example](/example.gif)
+
 ## Pre-requisites
 
 - Python 3.10
