@@ -5,6 +5,9 @@
             "source.organizeImports": true
         }
     },
+    "[html]": {
+        "editor.formatOnSave": true
+    },
     "python.analysis.typeCheckingMode": "strict",
     "python.formatting.provider": "black",
     "python.languageServer": "Pylance",
