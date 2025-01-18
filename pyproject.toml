@@ -1,7 +1,7 @@
 [project]
 name = "fastapi-sse"
 version = "0.1.0"
-description = "Add your description here"
+description = "Testing Server-sent events on FastAPI"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -13,4 +13,3 @@ dependencies = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
