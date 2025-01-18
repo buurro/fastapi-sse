@@ -2,6 +2,7 @@ import enum
 import threading
 import time
 from enum import Enum
+from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
@@ -10,7 +11,7 @@ from sse_starlette.sse import EventSourceResponse
 
 app = FastAPI()
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
 
 class State(Enum):

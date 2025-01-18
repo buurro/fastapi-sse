@@ -1,19 +1,16 @@
-[tool.poetry]
-name = "sse-example"
+[project]
+name = "fastapi-sse"
 version = "0.1.0"
-description = ""
-authors = ["Marco Burro <marcoburro98@gmail.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.79.0"
-sse-starlette = "^0.10.3"
-uvicorn = {extras = ["standard"], version = "^0.18.2"}
-Jinja2 = "^3.1.2"
-
-[tool.poetry.dev-dependencies]
-black = {version = "^22.6.0", allow-prereleases = true}
-
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.6",
+    "jinja2>=3.1.5",
+    "sse-starlette>=2.2.1",
+    "uvicorn>=0.34.0",
+]
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
