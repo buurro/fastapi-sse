@@ -75,6 +75,9 @@
             ];
             config = {
               Cmd = [ "uvicorn" "fastapi_sse.main:app" "--host=0.0.0.0" ];
+              ExposedPorts = {
+                "8000/tcp" = { };
+              };
             };
           };
         }
