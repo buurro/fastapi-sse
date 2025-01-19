@@ -4,19 +4,12 @@
 
 ## Pre-requisites
 
-- Python 3.10
-- Poetry
-
-## Installation
-
-```bash
-poetry install
-```
+- uv
 
 ## Usage
 
 ```bash
-poetry run uvicorn main:app --reload
+uv run uvicorn fastapi_sse.main:app
 ```
 
 You can then access this example at [http://127.0.0.1:8000](http://127.0.0.1:8000)

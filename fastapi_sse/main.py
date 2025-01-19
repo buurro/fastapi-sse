@@ -24,7 +24,6 @@ class State(Enum):
 
 current_state = State.INACTIVE
 
-# test
 
 async def state_generator(request: Request):
     global current_state
