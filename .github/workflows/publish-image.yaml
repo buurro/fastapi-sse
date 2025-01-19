@@ -26,9 +26,12 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build container
+      - name: Build container image
         run: nix build -L .#containerImage
-      - name: Push image to ghcr
+      - name: Load image
         run: |
           ./result | docker load
-          docker push "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
+      - name: Push image to ghcr
+        run: |
+          export IMAGE_TAG="`nix eval --raw .#containerImage.imageTag`"
+          docker push "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMAGE_TAG"

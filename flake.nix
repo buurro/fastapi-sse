@@ -61,7 +61,7 @@
       } // lib.optionalAttrs pkgs.stdenv.isLinux {
         containerImage = pkgs.dockerTools.streamLayeredImage {
           name = "ghcr.io/buurro/fastapi-sse";
-          tag = "latest";
+          tag = pythonSet.fastapi-sse.version;
           contents = [
             venv
             pkgs.busybox
