@@ -57,7 +57,15 @@
     in
     {
       packages = {
-        default = venv;
+        default = pkgs.writeShellApplication {
+          name = "fastapi-sse";
+
+          runtimeInputs = [ venv ];
+
+          text = ''
+            uvicorn fastapi_sse.main:app --host=0.0.0.0
+          '';
+        };
       } // lib.optionalAttrs pkgs.stdenv.isLinux {
         containerImage = pkgs.dockerTools.streamLayeredImage {
           name = "ghcr.io/buurro/fastapi-sse";
