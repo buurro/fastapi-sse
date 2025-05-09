@@ -1,3 +1,4 @@
+import asyncio
 import enum
 import threading
 import time
@@ -31,7 +32,7 @@ async def state_generator(request: Request):
 
     tmp = current_state
     while True:
-        time.sleep(0.2)
+        await asyncio.sleep(0.2)
         if await request.is_disconnected():
             break
         if current_state != tmp:
